@@ -1,3 +1,5 @@
+<div align="center">
+  
 # 🌕 Luna Obscura rice 
 Luna Obscura - A desaturated, dark monochrome Windows 11 rice
 ## 📸 Gallery
@@ -41,3 +43,5 @@ Luna Obscura - A desaturated, dark monochrome Windows 11 rice
 | **Status Bar** | YASB | Customizable status bar driven by custom stylesheet layouts. |
 
 ---
+
+</div>
