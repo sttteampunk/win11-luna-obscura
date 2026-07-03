@@ -37,5 +37,3 @@
 | **Text Editor** | Neovim / Neovide | Lightweight, extensible modal text editor. |
 | **File Manager** | Yazi | Fast, asynchronous terminal file manager. |
 | **Status Bar** | YASB | Customizable status bar driven by custom stylesheet layouts. |
-
----
