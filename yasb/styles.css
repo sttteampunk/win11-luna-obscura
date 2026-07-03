@@ -1,0 +1,785 @@
+/*VARIABLES AND SOME DEFAULT SETTINGS*/
+:root {
+  --hover: #151515;
+  --bg: rgba(0, 0, 0, 0.7);
+  --bg2: #3f3f42;
+  --bg3: #151515;
+  --text: #b2b2b2;
+  --text2t: rgba(229, 231, 235, 0.7);
+  --text2: #e5e7eb;
+  --textt: rgba(178, 178, 178, 0.7);
+}
+
+* {
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 600;
+  font-family: "JetBrainsMono NFP";
+  margin: 0;
+  padding: 0;
+}
+
+/*GENERAL CONFIGRATIONS*/
+.yasb-bar {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tooltip {
+  background-color: #000000B3;
+  border: 0px solid #36383a;
+  border-radius: 4px;
+  color: var(--text2);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: "JetBrainsMono NFP";
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Global context menu style */
+.context-menu,
+.context-menu .menu-checkbox {
+  background-color: var(--bg3);
+  border: none;
+  padding: 4px 0px;
+  font-family: 'JetBrainsMono NFP';
+  font-size: 12px;
+  color: var(--text)
+}
+
+.context-menu::right-arrow {
+  width: 8px;
+  height: 8px;
+  padding-right: 24px;
+}
+
+.context-menu::item,
+.context-menu .menu-checkbox {
+  background-color: transparent;
+  padding: 6px 12px;
+  margin: 2px 6px;
+  border-radius: 0px;
+  min-width: 100px;
+}
+
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+  background-color: var(--hover);
+  color: var(--text);
+}
+
+.context-menu::separator {
+  height: 0px;
+  background-color: transparent;
+}
+
+.context-menu::item:disabled {
+  color: var(--text2);
+  background-color: transparent;
+}
+
+.context-menu .menu-checkbox .checkbox {
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  margin: 0;
+  color: var(--text);
+  font-family: 'JetBrainsMono NFP'
+}
+
+.context-menu .submenu::item:disabled {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.context-menu .menu-checkbox .checkbox:unchecked {
+  color: var(--text)
+}
+
+.context-menu .menu-checkbox .checkbox::indicator {
+  width: 12px;
+  height: 12px;
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+  background: #dadada;
+  border-radius: 5px;
+  height: 4px;
+  width: 4px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+  background: var(--text);
+  border-radius: 5px;
+  height: 4px;
+  width: 4px;
+}
+
+.context-menu .menu-checkbox .checkbox:focus {
+  outline: none;
+}
+
+.widget {
+  padding: 0 0px;
+  margin: 0 4px;
+}
+
+.widget .icon {
+  font-size: 15px;
+}
+
+.widget .label {
+  color: var(--text);
+}
+
+/*WIDGET*/
+.home-widget .label {
+  font-family: "JetBrainsMono NFP";
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-right: -8px;
+}
+
+/*HOME WIDGET DROPDOWN*/
+.home-menu {
+  background-color: transparent;
+  margin-left: 6px;
+}
+
+.home-menu .menu-item {
+  padding: 8px 10px 10px 8px;
+  font-size: 12px;
+  font-family: "JetBrainsMono NFP";
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.home-menu .menu-item:hover {
+  background-color: var(--hover);
+  color: var(--text);
+  margin-left: 6px;
+}
+
+
+.komorebi-active-layout .label {
+  font-size: 14px;
+  color: var(--textt);
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.komorebi-active-layout {
+  background-color: transparent;
+  height: 1;
+}
+
+.komorebi-layout-menu {
+  background-color: var(--bg);
+  border: 0px solid var(--text);
+  border-radius: 10px;
+}
+
+.komorebi-layout-menu .menu-item {
+  padding: 4px 10px;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.komorebi-layout-menu .menu-item-icon {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.komorebi-layout-menu .menu-item-text {
+  font-family: 'JetBrainsMono NFP';
+  padding-left: 0px;
+  font-size: 12px;
+}
+
+.komorebi-layout-menu .menu-item:hover {
+  background-color: var(--hover);
+}
+
+.widget.komorebi-workspaces {
+  margin-left: 1px;
+  margin-right: -4px;
+}
+
+/*KOMOREBI-SPACES*/
+.komorebi-spaces {
+  background-color: transparent;
+}
+
+.komorebi-workspaces .offline-status {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.komorebi-workspaces .ws-btn {
+  border: none;
+  font-family: JetBrainsMono NFP;
+  font-size: 16px;
+  padding: 8px 8px;
+  margin-top: 1px;
+  font-weight: bold;
+  color: var(--textt);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.komorebi-workspaces .ws-btn.populated {
+  background-color: transparent;
+  overflow: visible;
+  color: var(--textt);
+}
+
+.komorebi-workspaces .ws-btn.active {
+  background-color: rgba(21, 21, 21, 0.3);
+  color: var(--text);
+  overflow: visible;
+  padding: 8px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/*BATTERY WIDGET*/
+.battery-widget {
+  background-color: transparent;
+}
+
+.battery-widget .icon {
+  padding-right: 4px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.battery-widget .label {
+  font-size: 14px;
+  font-family: JetBrainsMono NFP;
+  color: var(--text);
+}
+
+/*CLOCK - CALENDAR WIDGET*/
+.clock-widget .label {
+  font-size: 14px;
+  font-family: JetBrainsMono NFP;
+  color: var(--text);
+  font-weight: 550;
+  margin: 0 0px;
+  padding: 0px;
+  overflow: visible;
+}
+
+.clock-widget {
+  background-color: transparent;
+  margin: 0 0px;
+  padding: 0px;
+  overflow: visible;
+}
+
+/*CLOCK - CALENDAR WIDGET DROPDOWN*/
+.calendar {
+  background-color: var(--bg);
+  border: 0px solid var(--bg);
+  border-radius: 6px;
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+  background-color: transparent;
+  color: var(--text);
+  font-family: 'JetBrainsMono NFP';
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.calendar .calendar-table::item:selected {
+  color: var(--text);
+}
+
+.calendar .day-label {
+  margin-top: 20px;
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+  font-family: 'JetBrainsMono NFP';
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 700;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.calendar .month-label {
+  font-weight: normal;
+}
+
+.calendar .date-label {
+  font-size: 88px;
+  font-weight: 900;
+  color: var(--text);
+  margin-top: -20px;
+}
+
+/*AUDIO WIDGET*/
+.volume-widget {
+  background-color: transparent;
+}
+
+.volume-widget .icon {
+  padding: 0 6px;
+  color: var(--text);
+  padding-left: 0px;
+  padding-top: 1;
+  font-size: 13px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  overflow: visible;
+}
+
+.volume-widget .label {
+  font-size: 13px;
+  font-family: JetBrainsMono NFP;
+  color: var(--textt);
+}
+
+/*AUDIO DROPDOWN*/
+.audio-menu {
+  background-color: var(--bg);
+}
+
+.audio-container .device {
+  font-family: JetBrainsMono NFP;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.audio-container .device.selected {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.audio-container .device:hover {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+/*MEDIA WIDGET*/
+.media-widget {
+  background-color: transparent;
+}
+
+.media-widget .label {
+  font-family: JetBrainsMono NFP;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.media-widget .btn {
+  color: var(--text);
+  padding-left: -20px;
+}
+
+/*MEDIA POPUP*/
+.media-menu {
+  min-width: 416px;
+  max-width: 416px;
+  background-color: var(--bg);
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+}
+
+.media-menu .thumbnail {
+  border: 2px solid var(--text);
+  border-radius: 0px;
+}
+
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: JetBrainsMono NFP;
+  color: var(--text);
+  margin-left: 10px;
+}
+
+.media-menu .artist {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.media-menu .source {
+  font-size: 13px;
+  color: var(--bg);
+  font-weight: bold;
+  font-family: JetBrainsMono NFP;
+  border-radius: 0px;
+  background-color: var(--text);
+  padding: 2px 6px;
+}
+
+.media-menu .source.firefox {
+  background-color: #ff583b;
+  color: #e5e7eb;
+}
+
+.media-menu .source.spotify {
+  background-color: #199143;
+  color: #e5e7eb;
+}
+
+.media-menu .source.edge {
+  background-color: #0078d4;
+  color: #e5e7eb;
+}
+
+.media-menu .source.windows-media {
+  background-color: #0078d4;
+  color: #e5e7eb;
+}
+
+.media-menu .btn {
+  font-family: "Segoe Fluent Icons";
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  color: var(--text);
+}
+
+.media-menu .btn.prev {
+  margin-left: 10px;
+  color: var(--text);
+}
+
+.media-menu .btn:hover {
+  background-color: transparent;
+}
+
+.media-menu .btn.play {
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+  color: var(--text);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.media-menu .playback-time {
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  min-width: 100px;
+}
+
+.media-menu .progress-slider {
+  height: 5px;
+  border-radius: 0px;
+  background-color: var(--hover);
+}
+
+.media-menu .progress-slider::groove {
+  height: 4px;
+  border-radius: 3px;
+  color: var(--hover);
+}
+
+.media-menu .progress-slider::groove:hover {
+  height: 6px;
+  border-radius: 3px;
+}
+
+.media-menu .progress-slider::sub-page {
+  background: var(--text);
+  border-radius: 6px;
+  height: 4px;
+}
+
+/*WALLPAPERS GALLERY*/
+.wallpapers-gallery-window {
+  background-color: transparent;
+}
+
+.wallpapers-gallery-buttons {
+  font-size: 12px;
+  font-family: 'JetBrainsMono NFP';
+  background-color: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  padding: 8px 0;
+  margin: 0 8px 8px 8px;
+  width: 600px;
+  border-radius: 0px;
+}
+
+.wallpapers-gallery-buttons:hover {
+  background-color: var(--hover);
+}
+
+.wallpapers-gallery-image {
+  border: 4px solid transparent;
+}
+
+.wallpapers-gallery-image:hover {
+  border: 3px solid var(--text);
+}
+
+/*POWER WIDGET*/
+.power-menu-widget .label {
+  color: var(--text);
+  font-size: 14px;
+  padding: 0px 8px;
+  margin-left: -8px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/*POWER MENU POPUP*/
+.uptime {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--textt);
+  font-weight: 600;
+  font-family: "JetBrainsMono NFP";
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.power-menu-popup .button {
+  margin: 15px;
+  padding: 0;
+  width: 160px;
+  height: 240px;
+  border-radius: 10px;
+  background-color: var(--bg);
+  font-family: "JetBrainsMono NFP";
+  color: var(--text);
+  border: 0px solid var(--bg);
+
+}
+
+.power-menu-popup .button.hover {
+  background-color: var(--hover);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.power-menu-popup .button .label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: "JetBrainsMono NFP";
+
+}
+
+.power-menu-popup .button .icon {
+  font-size: 64px;
+  padding-top: 54px;
+  color: var(--text);
+}
+
+.power-menu-popup .button.cancel .icon {
+  color: rgba(243, 139, 168, 0.55);
+}
+
+.power-menu-popup .button.cancel .label {
+  color: rgba(243, 139, 168, 0.95);
+}
+
+.cava-widget {
+  background-color: transparent;
+  margin-right: 2px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/*SYSTEM TRAY*/
+.systray .button {
+  margin-top: 3px;
+  margin-left: 4px;
+  background: transparent;
+  border-radius: 0px;
+  font-size: 15px;
+  padding: 2px 2px;
+}
+
+.systray .unpinned-visibility-btn {
+  color: var(--textt);
+  margin-top: 3px;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 4px;
+}
+
+.taskbar-widget {
+  margin-left: -6px;
+}
+
+.taskbar-widget .app-container {
+  background-color: transparent;
+  border: 0px solid;
+  border-color: var(--text);
+}
+
+.taskbar-widget .app-container.foreground {
+  background-color: transparent;
+  border-bottom: 2px solid;
+  border-color: var(--text);
+  margin-top: 2px;
+}
+
+.taskbar-widget .app-container.foreground .app-title:hover {
+  margin: 4px 2px;
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.taskbar-widget .app-container.flashing {
+  background-color: rgba(255, 106, 106, 0.63);
+  margin: 3px 2px;
+}
+
+.taskbar-widget .app-container.running {
+  background-color: transparent;
+  margin: 3px 2px;
+}
+
+.taskbar-widget .app-container.running .app-title:hover {
+  color: var(--bg);
+  background-color: var(--text);
+  margin: 3px 2px;
+}
+
+
+.taskbar-widget .app-container .app-title {
+  color: var(--text);
+  font-family: JetBrainsMono NFP;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* Taskbar preview popup is very limited in styling options, do not use margins/paddings here */
+.taskbar-preview {
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+.taskbar-preview.flashing {
+  background-color: #7f434a;
+}
+
+.taskbar-preview .header {
+  padding-bottom: 12px;
+  padding-top: 4px;
+}
+
+.taskbar-preview .header .title {
+  color: var(--text);
+  font-family: "JetBrainsMono NFP";
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.separator-widget .widget-container .label {
+  color: var(--text2);
+  margin-left: -8px;
+  font-weight: 700;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.7);
+  overflow: visible;
+}
+
+.custom-widget .widget-container .label {
+  padding: 0px 8px;
+  margin-right: -8px;
+}
+
+/* ACTIVE WINDOW */
+.active-window-widget {
+  background-color: transparent;
+  padding: 0px 0px;
+}
+
+.active-window-widget .label {
+  color: var(--text);
+  font-family: "JetBrainsMono NFP";
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* MOON */
+.moon-phase .widget-container .label {
+  color: var(--text2);
+  font-family: JetBrainsMono NFP;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  overflow: visible;
+  padding: 0 10px;
+  margin-right: -6px;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.7);
+}
+
+/* MEMORY */
+.memory-widget .label {
+  font-size: 13px;
+  font-family: JetBrainsMono NFP;
+  color: var(--textt);
+}
+
+.memory-widget .icon {
+  padding: 0 6px;
+  color: var(--text);
+  padding-left: 0px;
+  padding-top: 1;
+  font-size: 16px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* --- CLOCK TIME (Bright Color Accent) --- */
+.widget.clock-time {
+  margin-right: 0px;
+  /* Keeps the date tucked closely nearby */
+}
+
+.clock-time .widget-container .label {
+  font-size: 14px;
+  font-family: JetBrainsMono NFP;
+  color: var(--text);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  /* Uses your bright text color */
+}
+
+/* --- CLOCK DATE (Muted Color Accent) --- */
+.widget.clock-date {
+  margin-top: 2px;
+  margin-left: 9px;
+  /* Perfectly proportioned space between time & date */
+}
+
+.clock-date .widget-container .label {
+  font-size: 13px;
+  font-family: JetBrainsMono NFP;
+  font-weight: bold;
+  color: var(--textt);
+  /* Uses your standard subtle grey text color */
+}

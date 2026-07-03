@@ -1,0 +1,160 @@
+/**
+ * @name system24
+ * @description a tui-style discord theme.
+ * @author refact0r
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+  /* Font Configurations - Matched exactly to your YASB layout */
+  --font: 'JetBrainsMono NFM';
+  --code-font: 'JetBrainsMono NFM';
+  font-weight: 500;
+  letter-spacing: -0.02ch;
+
+  /* Sizes */
+  --gap: 10px;
+  /* Perfectly aligns panel gaps with your 10px radius curves */
+  --divider-thickness: 2px;
+  --border-thickness: 1px;
+  --border-hover-transition: 0.2s ease;
+
+  /* Animation/Transition options */
+  --animations: on;
+  --list-item-transition: 0.2s ease;
+  --dms-icon-svg-transition: 0.4s ease;
+
+  /* Top bar options */
+  --top-bar-height: var(--gap);
+  --top-bar-button-position: titlebar;
+  --top-bar-title-position: off;
+  --subtle-top-bar-title: off;
+
+  /* Window controls */
+  --custom-window-controls: off;
+  --window-control-size: 14px;
+
+  /* DMs button options */
+  --custom-dms-icon: off;
+  --dms-icon-svg-url: url('');
+  --dms-icon-svg-size: 90%;
+  --dms-icon-color-before: var(--icon-secondary);
+  --dms-icon-color-after: var(--white);
+  --custom-dms-background: off;
+  --dms-background-image-url: url('');
+  --dms-background-image-size: cover;
+  --dms-background-color: #3f3f42;
+
+  /* Background image options */
+  --background-image: off;
+  --background-image-url: url('');
+
+  /* Transparency/Blur Options - CRITICAL FOR YASB LOOK */
+  --transparency-tweaks: on;
+  /* Enabled for transparent framework adjustments */
+  --remove-bg-layer: on;
+  /* Removes the solid opaque layer to allow blur traversal */
+  --panel-blur: on;
+  /* Activates real-time panel background blurring */
+  --blur-amount: 20px;
+  /* Gives that rich, premium liquid glass depth */
+  --bg-floating: rgba(10, 10, 10, 0.95);
+  /* Slightly darker backing for dropdown elements */
+
+  /* Other options */
+  --small-user-panel: on;
+
+  /* Unrounding Options - CHANGED TO OFF FOR 10PX RADIUS CONTINUITY */
+  --unrounding: off;
+
+  /* Styling options */
+  --custom-spotify-bar: on;
+  --ascii-titles: off;
+  --ascii-loader: system24;
+
+  /* Panel labels */
+  --panel-labels: on;
+  --label-color: var(--text-4);
+  --label-font-weight: 600;
+}
+
+:root {
+  --colors: on;
+
+  /* Text Colors */
+  --text-0: #0a0a0a;
+  /* Dark text on active light items (--bg3) */
+  --text-1: #e5e7eb;
+  /* Pure white/bright focused elements (--text2) */
+  --text-2: #e5e7eb;
+  /* Headings and primary menu paths (--text2) */
+  --text-3: #b2b2b2;
+  /* Default standard chat and content text (--text) */
+  --text-4: #b2b2b2;
+  /* Unfocused sidebar icons and channel lists */
+  --text-5: rgba(178, 178, 178, 0.5);
+  /* Timestamps and heavily muted channels */
+
+  /* Background and Dark Colors mapped to your 70% opacity canvas */
+  --bg-1: #3f3f42;
+  /* Active selection blocks (--bg2) */
+  --bg-2: #151515;
+  /* Base button frames (--bg3) */
+  --bg-3: rgba(10, 10, 10, 0.9);
+  /* Core Translucent Layout Canvas (var(--bg)) */
+  --bg-4: rgba(10, 10, 10, 0.9);
+  /* Global App Backing (var(--bg)) */
+  --hover: rgba(63, 63, 66, 0.2);
+  /* Transparent hover state based on your --bg2 */
+  --active: rgba(63, 63, 66, 0.4);
+  /* Transparent selection state based on your --bg2 */
+  --active-2: rgba(63, 63, 66, 0.5);
+  --message-hover: rgba(255, 255, 255, 0.03);
+
+  /* Accent System */
+  --accent-1: #e5e7eb;
+  /* Accent highlights (--text2) */
+  --accent-2: #e5e7eb;
+  --accent-3: #e5e7eb;
+  --accent-4: #ffffff;
+  --accent-5: #ffffff;
+  --accent-new: #3f3f42;
+  /* Mutes notifications into your core dark accent tone */
+
+  --mention: linear-gradient(to right, rgba(63, 63, 66, 0.3) 40%, transparent);
+  --mention-hover: linear-gradient(to right, rgba(63, 63, 66, 0.4) 40%, transparent);
+  --reply: linear-gradient(to right, rgba(178, 178, 178, 0.1) 40%, transparent);
+  --reply-hover: linear-gradient(to right, rgba(178, 178, 178, 0.15) 40%, transparent);
+
+  /* Status Indicator System */
+  --online: #e5e7eb;
+  /* Clean Monochrome Status mappings */
+  --dnd: #3f3f42;
+  --idle: #b2b2b2;
+  --streaming: #e5e7eb;
+  --offline: rgba(178, 178, 178, 0.4);
+
+  /* Borders */
+  --border-light: rgba(63, 63, 66, 0.2);
+  --border: rgba(63, 63, 66, 0.4);
+  --border-hover: #e5e7eb;
+  --button-border: rgba(255, 255, 255, 0.05);
+}
+
+.layers_a01e57,
+.sidebar_a4d4d9,
+.chat_a7d72e,
+.container_c483ee,
+.membersWrap_cbd271,
+.wrapper_a7e323 {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
