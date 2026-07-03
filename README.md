@@ -1,8 +1,8 @@
-<div align="center">
-  
-# 🌕 Luna Obscura rice 
+<h1 align="center">🌕 Luna Obscura rice </h1>
+
 Luna Obscura - A desaturated, dark monochrome Windows 11 rice
-## 📸 Gallery
+
+<h2 align="center">📸 Gallery</h2>
 
 ![1](assets/1.png)
 
@@ -30,9 +30,7 @@ Luna Obscura - A desaturated, dark monochrome Windows 11 rice
 
 ![7](assets/7.png)
 
----
-
-## 🛠️ System Components
+<h2 align="center">🛠️ System Components</h2>
 
 | Component | Software Used | Description 
 | --- | --- | --- |
@@ -43,5 +41,3 @@ Luna Obscura - A desaturated, dark monochrome Windows 11 rice
 | **Status Bar** | YASB | Customizable status bar driven by custom stylesheet layouts. |
 
 ---
-
-</div>
