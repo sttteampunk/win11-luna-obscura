@@ -1,7 +1,5 @@
 <h1 align="center">🌕 Luna Obscura rice </h1>
 
-Luna Obscura - A desaturated, dark monochrome Windows 11 rice
-
 <h2 align="center">📸 Gallery</h2>
 
 ![1](assets/1.png)
